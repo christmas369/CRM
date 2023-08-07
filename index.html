@@ -6,50 +6,50 @@
     </head>
     <body>
       <form action="https://jsonplaceholder.typicode.com/posts"
-              method="post">
-      <input type="text" name="login">
-      <input type="password" name="password">
-      <input type="file" name="file">
-      <input type="hidden" name="hidden">
+            method="post">
+        <h1>Добавить товар</h1>    
+        <fieldset>
+          <label>Наименование
+            <p><input type="text" name="name"></p>
+          </label>
 
-      <br>
+          <label>Категория
+            <p><input type="text" name="category" list="list_category"></p>
+          </label>
+          <datalist id="list_category">
+            <option>Обувь</option>
+            <option>Одежда</option>
+            <option>Спортовары</option>
+            <option>Игрушки</option>
+            <option>Бытовая техника</option>
+          </datalist>
 
-      <button type="button">Кнопка</button>
-      <button type="submit">Отправить данные</button>
-      <button type="reset">Очистить поля</button>
+          <label>Единицы измерения
+            <p><input type="text" name="units"></p>
+          </label>
 
-      <br>
+          <label>Дисконт
+            <p><input type="checkbox" name="is_sale"><input type="number" size="500" min="5" max="60" step="5" name="size_sale"></p>
+          </label>
 
-      <input type="checkbox" name="meal" value="first">Первое
-      <input type="checkbox" name="meal" value="second">Второе
-      <input type="checkbox" name="meal" value="kompot">и компот
+          <label>Описание
+            <p><textarea cols="25" rows="5" placeholder="Введите описание товара. Не более 5 предложений"></textarea></p>
+          </label>
+
+          <label>Количество
+            <p><input type="number" name="count"></p>
+          </label>
+
+          <label>Цена
+            <p><input type="number" name="price"></p>
+          </label>
+
+          <label>Цена
+            <p><input type="file" name="image" accept="image/*"></p>
+          </label>
+        </fieldset>
+      <button type="submit">Добавить товар</button>  
       
-      <br>
-
-      <input type="radio" name="breakfast" value="eggs">Яичница
-      <input type="radio" name="breakfast" value="porrige">Каша
-      <input type="radio" name="breakfast" value="donuts">Пончики
-
-      <br>
-
-      <input type="range" name="age">
-
-      <br>
-
-      <input type="number" name="height">
-
-      <br>
-
-      <textarea type="textarea" name="text"></textarea>
-
-      <br>
-
-      <select name="select">
-        <option value="first">Первый</option>
-        <option value="second">Второй</option>
-        <option value="third">Третий</option>
-        <option value="fourth">Четвертый</option>
-      </select>
       </form>
     </body>
 </html>
