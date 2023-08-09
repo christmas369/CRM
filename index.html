@@ -43,14 +43,14 @@
               method="post">
           <h2>Добавить товар</h2>    
           <fieldset>
-            <p>
+            <div>
               <label for="name">Наименование</label>
               <input type="text" name="name" id="name" required>
-            </p>
-            <p>
+            </div>
+            <div>
               <label for="category">Категория</label>
               <input type="text" name="category" id="category" list="list_category" required>
-            </p>
+            </div>
             <datalist id="list_category">
               <option>Обувь</option>
               <option>Одежда</option>
@@ -59,30 +59,30 @@
               <option>Бытовая техника</option>
             </datalist>
 
-            <p>
+            <div>
               <label for="units">Единицы измерения</label>
               <input type="text" name="units" id="units" required>
-            </p>
-            <p>
+            </div>
+            <div>
               <label for="size_sale">Дисконт</label>
               <input type="checkbox" required ><input type="number" name="size_sale" id="size_sale" disabled required>
-            </p>
-            <p>
+            </div>
+            <div>
               <label for="description">Описание</label>
               <textarea name="description" rows="5" id="description" required></textarea>
               
-            </p>
-            <p>
+            </div>
+            <div>
               <label for="count">Количество</label>
               <input type="number" name="count" id="count" required>
-            </p>
-            <p>
+            </div>
+            <div>
               <label for="price">Цена</label>
               <input type="number" name="price" id="price" required>
-            </p>
-            <p>
+            </div>
+            <div>
               <input type="file" name="image" accept="image/png,image/jpeg">
-            </p>
+            </div>
 
           </fieldset>
 
