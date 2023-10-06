@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>CRM-GoodShop</title>
+
+        <link rel="preload" href="fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/form.css">
+    </head>
+    <body>
+      <section class="modal">
+        <div class="container">
+          <div class="cross">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L18 18" stroke="#6E6893" stroke-width="3" stroke-linecap="round"/>
+              <path d="M2 18L18 2" stroke="#6E6893" stroke-width="3" stroke-linecap="round"/>
+              </svg>                   
+          </div>          
+          <form action="https://jsonplaceholder.typicode.com/posts"
+                  method="post" class="form" id="form">
+            <h2 class="form__title">Добавить товар</h2>
+            <fieldset class="form__block">
+                <label for="name" class="form__label">Наименование</label>
+                <input type="text" name="name" id="name" class="form__input" required>        
+                
+                <label for="category" class="form__label">Категория</label>
+                <input type="text" name="category" id="category" list="form__list" class="form__input" required>
+                
+                <datalist id="form__list">
+                  <option>Обувь</option>
+                  <option>Одежда</option>
+                  <option>Спортовары</option>
+                  <option>Игрушки</option>
+                  <option>Бытовая техника</option>
+                </datalist>
+
+                <label for="category" class="form__label">Единицы измерения</label>
+                <input type="text" name="units" id="units" class="form__input" required>
+                            
+                <label for="size_sale" class="form__label">Дисконт</label>
+                <div class="checkbox"> 
+                    <input type="checkbox" aria-label="dicount" class="checkbox__input" required >
+                    <input type="number" name="size_sale" id="size_sale" class="form__input" disabled required>
+                </div>
+                
+                <label for="description" class="form__label">Описание</label>
+                <textarea name="description" rows="5" id="description" class="form__input textarea" required></textarea>            
+                        
+                <label for="count" class="form__label">Количество</label>
+                <input type="number" name="count" id="count" class="form__input" required>
+                
+                <label for="price" class="form__label">Цена</label>
+                <input type="number" name="price" id="price" class="form__input" required> 
+              </fieldset>
+              
+              <button type="submit" form="form" class="form__button">Добавить товар</button>      
+            </form>
+        </div>
+      </section>
+    </body>
+</html>
